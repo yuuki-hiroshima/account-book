@@ -1,3 +1,5 @@
+# サンプルコード（本体には使わない）
+
 from db import get_connection
 
 def insert_test_record():

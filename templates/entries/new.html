@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>新規登録</title>
+</head>
+<body>
+  <h1>新規登録</h1>
+  
+  <form method="post" action="/entries">
+
+    <div>
+      <label>日付</label>
+      <input type="date" name="date" required>
+    </div>
+
+    <div>
+      <label>区分</label>
+      <label><input type="radio" name="type" value="income" required> 収入</label>
+      <label><input type="radio" name="type" value="expense" required> 支出</label>
+    </div>
+
+    <div>
+      <label>勘定項目</label>
+      <input type="text" name="account" required placeholder="例：通信費">
+    </div>
+
+    <div>
+      <label>摘要（任意）</label>
+      <input type="text" name="summary" placeholder="例：クラウド利用料">
+    </div>
+
+    <div>
+      <label>金額</label>
+      <input type="number" name="amount" required min="0" step="1" placeholder="例：12000">
+    </div>
+
+    <button type="submit">登録</button>
+  </form>
+
+  <p><a href="/entries">一覧へ戻る</a></p>
+</body>
+</html>
